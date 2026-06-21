@@ -500,3 +500,167 @@ document.addEventListener("DOMContentLoaded", () => {
     // para reabrir o painel de consentimento.
     window.__lgpd = lgpd; // expõe instância para debugging e integração
 });
+
+/**
+ * Security Headers Middleware — Nota A+ (SecurityHeaders.com)
+ * Stack: Node.js + Express
+ *
+ * AVISO: Ajuste o Content-Security-Policy para o seu projeto.
+ * Um CSP genérico vai bloquear recursos que você usa (Google Fonts, CDNs, etc).
+ *
+ * Testado contra: https://securityheaders.com
+ */
+
+"use strict";
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+/**
+ * Monta uma CSP string a partir de um objeto de diretivas.
+ * Facilita manutenção sem escrever uma string gigante manualmente.
+ */
+function buildCSP(directives) {
+  return Object.entries(directives)
+    .map(([key, values]) => {
+      if (values === true) return key; // ex: "upgrade-insecure-requests"
+      if (Array.isArray(values)) return `${key} ${values.join(" ")}`;
+      return `${key} ${values}`;
+    })
+    .join("; ");
+}
+
+// ─── Diretivas CSP ────────────────────────────────────────────────────────────
+//
+// PERSONALIZE AQUI antes de subir para produção.
+// Cada 'unsafe-inline' ou '*' que você adicionar derruba a nota.
+//
+// Guia rápido:
+//   'self'            → apenas seu próprio domínio
+//   'none'            → bloqueia tudo (ideal para font-src se não usa externas)
+//   https:            → qualquer origem HTTPS (evite quando possível)
+//   nonce-{token}     → permite inline específico via nonce (recomendado vs unsafe-inline)
+
+const CSP_DIRECTIVES = {
+  "default-src":    ["'self'"],
+  "script-src":     ["'self'"],          // adicione CDNs necessários aqui
+  "style-src":      ["'self'"],          // ex: https://fonts.googleapis.com
+  "font-src":       ["'self'"],          // ex: https://fonts.gstatic.com
+  "img-src":        ["'self'", "data:"], // data: necessário para SVGs inline
+  "connect-src":    ["'self'"],          // WebSockets, fetch — adicione sua API
+  "media-src":      ["'none'"],
+  "object-src":     ["'none'"],          // bloqueia Flash e plugins
+  "frame-src":      ["'none'"],          // bloqueia iframes (altere se usar embeds)
+  "frame-ancestors": ["'none'"],         // equivalente ao X-Frame-Options: DENY
+  "base-uri":       ["'self'"],          // previne injeção de <base href>
+  "form-action":    ["'self'"],          // controla onde forms podem enviar dados
+  "upgrade-insecure-requests": true,     // força HTTPS em subrecursos
+};
+
+// ─── Permissions Policy ───────────────────────────────────────────────────────
+//
+// Desativa APIs do navegador que você não usa.
+// Reduz superfície de ataque e melhora privacidade do usuário.
+// Lista completa: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy
+
+const PERMISSIONS_POLICY = [
+  "accelerometer=()",
+  "ambient-light-sensor=()",
+  "autoplay=()",
+  "battery=()",
+  "camera=()",
+  "cross-origin-isolated=()",
+  "display-capture=()",
+  "document-domain=()",
+  "encrypted-media=()",
+  "execution-while-not-rendered=()",
+  "execution-while-out-of-viewport=()",
+  "fullscreen=(self)",  // (self) = permitido apenas na sua origem
+  "geolocation=()",
+  "gyroscope=()",
+  "keyboard-map=()",
+  "magnetometer=()",
+  "microphone=()",
+  "midi=()",
+  "navigation-override=()",
+  "payment=()",
+  "picture-in-picture=()",
+  "publickey-credentials-get=()",
+  "screen-wake-lock=()",
+  "sync-xhr=()",
+  "usb=()",
+  "web-share=()",
+  "xr-spatial-tracking=()",
+].join(", ");
+
+// ─── Middleware Principal ──────────────────────────────────────────────────────
+
+function securityHeaders(req, res, next) {
+
+  // 1. Força HTTPS — todos subrecursos e redirecionamentos
+  //    max-age: 1 ano (valor mínimo para HSTS preload list)
+  //    includeSubDomains: aplica a todos os subdomínios
+  //    preload: candidatura à lista de preload do Chrome (opcional mas recomendado)
+  //
+  //    ATENÇÃO: Só habilite 'preload' se seu servidor SEMPRE servir HTTPS.
+  //    Reverter HSTS depois de ativado é doloroso.
+  res.setHeader(
+    "Strict-Transport-Security",
+    "max-age=31536000; includeSubDomains; preload"
+  );
+
+  // 2. Impede que o browser "adivinhe" o Content-Type
+  //    Previne ataques MIME sniffing
+  res.setHeader("X-Content-Type-Options", "nosniff");
+
+  // 3. Controla informações de referência enviadas em requisições
+  //    'strict-origin-when-cross-origin': envia origem completa para same-origin,
+  //    apenas a origem (sem path) para cross-origin HTTPS, nada para HTTP
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+
+  // 4. Bloqueia clickjacking via iframes
+  //    'frame-ancestors none' na CSP é mais moderno, mas esse header
+  //    garante cobertura em browsers que não suportam CSP level 3
+  res.setHeader("X-Frame-Options", "DENY");
+
+  // 5. Content Security Policy
+  res.setHeader("Content-Security-Policy", buildCSP(CSP_DIRECTIVES));
+
+  // 6. Permissions Policy — desativa APIs desnecessárias
+  res.setHeader("Permissions-Policy", PERMISSIONS_POLICY);
+
+  // 7. Cross-Origin headers (necessários para isolamento)
+  //    COEP: bloqueia recursos cross-origin sem permissão explícita
+  //    COOP: isola a janela do navegador de outras origens
+  //
+  //    ATENÇÃO: pode quebrar embeds de terceiros (YouTube, iframes, popups OAuth).
+  //    Comente as duas linhas abaixo se isso for um problema.
+  res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+  res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+
+  // 8. Remove header que expõe que você usa Express
+  //    Reduz informação disponível para reconhecimento (fingerprinting)
+  res.removeHeader("X-Powered-By");
+
+  next();
+}
+
+// ─── Redirecionamento HTTP → HTTPS ────────────────────────────────────────────
+//
+// Se seu servidor recebe requisições HTTP diretas (ex: porta 80 separada),
+// use este middleware antes dos demais para forçar HTTPS.
+//
+// Se você usa Vercel, Nginx, ou Cloudflare para isso, não precisa deste middleware.
+
+function forceHTTPS(req, res, next) {
+  // Em produção, detecta se a requisição veio por HTTP
+  // (req.secure não funciona atrás de proxy sem trust proxy)
+  const isHTTPS = req.secure || req.headers["x-forwarded-proto"] === "https";
+
+  if (process.env.NODE_ENV === "production" && !isHTTPS) {
+    return res.redirect(301, `https://${req.hostname}${req.originalUrl}`);
+  }
+
+  next();
+}
+
+module.exports = { securityHeaders, forceHTTPS };
