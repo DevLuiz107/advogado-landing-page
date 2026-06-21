@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricardo Advocacia — Assessoria Jurídica em Alfenas</title>
+  <meta name="description" content="Advocacia especializada em direito civil, empresarial e trabalhista em Alfenas, MG. Agende sua consulta.">
+
+  <!-- Google Fonts: Cormorant (display) + Inter (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVEGAÇÃO
+  ═══════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <a href="/" class="logo" aria-label="Ricardo Advocacia — página inicial">
+      <span class="logo__name">Ricardo</span>
+      <span class="logo__suffix">Advocacia</span>
+    </a>
+
+    <nav aria-label="Menu principal">
+      <ul class="nav__menu">
+        <li><a href="#sobre"   class="nav__link">Sobre</a></li>
+        <li><a href="#areas"   class="nav__link">Áreas</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contato" class="btn btn--outline">
+      Agendar consulta <span aria-hidden="true">↗</span>
+    </a>
+
+    <!-- Hamburguer (mobile) -->
+    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Menu mobile -->
+  <div class="nav__mobile" id="nav-menu-mobile" aria-hidden="true">
+    <ul>
+      <li><a href="#sobre"   class="nav__link">Sobre</a></li>
+      <li><a href="#areas"   class="nav__link">Áreas</a></li>
+      <li><a href="#contato" class="nav__link">Contato</a></li>
+      <li><a href="#contato" class="btn btn--gold">Agendar consulta</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO — canvas de rachaduras aqui
+  ═══════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <canvas id="cracks-canvas" aria-hidden="true"></canvas>
+
+    <!-- Vinheta radial por cima do canvas -->
+    <div class="hero__vignette" aria-hidden="true"></div>
+
+    <!-- Linha decorativa lateral -->
+    <div class="hero__sideline" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">OAB/MG · Alfenas</p>
+
+      <h1 class="hero__title" id="hero-heading">
+        Quando a lei é<br>
+        <em>complexa</em>,<br>
+        a defesa precisa<br>
+        ser sólida.
+      </h1>
+
+      <p class="hero__sub">
+        Assessoria jurídica especializada em direito civil, empresarial e trabalhista.
+        Estratégia com resultados que resistem ao tempo.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contato" class="btn btn--gold">Agendar consulta gratuita</a>
+        <a href="#areas"   class="btn btn--ghost">Conhecer áreas de atuação</a>
+      </div>
+    </div>
+
+    <!-- Badge de credibilidade -->
+    <div class="hero__badge">
+      <span class="hero__badge-num">+15</span>
+      <span class="hero__badge-label">anos de<br>experiência</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SOBRE
+  ═══════════════════════════════════════ -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre__grid">
+        <div class="sobre__text">
+          <span class="section__eyebrow">Sobre o escritório</span>
+          <h2 class="section__title">Décadas de experiência.<br>Compromisso com cada caso.</h2>
+          <p class="sobre__body">
+            O escritório Ricardo Advocacia atua há mais de 15 anos na região de Alfenas,
+            construindo uma reputação baseada em rigor técnico, ética e resultados concretos
+            para pessoas físicas e empresas.
+          </p>
+          <p class="sobre__body">
+            Cada cliente recebe atenção personalizada — sem respostas genéricas,
+            sem promessas vazias.
+          </p>
+          <a href="#contato" class="btn btn--gold">Fale com o escritório</a>
+        </div>
+
+        <div class="sobre__stats">
+          <div class="stat">
+            <span class="stat__num">+500</span>
+            <span class="stat__label">Casos atendidos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">+15</span>
+            <span class="stat__label">Anos de experiência</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">3</span>
+            <span class="stat__label">Áreas de atuação</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">100%</span>
+            <span class="stat__label">Dedicação ao cliente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ÁREAS DE ATUAÇÃO
+  ═══════════════════════════════════════ -->
+  <section class="section areas" id="areas">
+    <div class="container">
+      <span class="section__eyebrow">Atuação</span>
+      <h2 class="section__title">Áreas de especialização</h2>
+
+      <div class="areas__grid">
+
+        <article class="area-card">
+          <div class="area-card__icon" aria-hidden="true">⚖</div>
+          <h3 class="area-card__title">Direito Civil</h3>
+          <p class="area-card__body">
+            Contratos, responsabilidade civil, família e sucessões, direito do consumidor.
+            Representação em todas as instâncias.
+          </p>
+          <a href="#contato" class="area-card__link">Consultar <span>→</span></a>
+        </article>
+
+        <article class="area-card area-card--highlight">
+          <div class="area-card__icon" aria-hidden="true">🏛</div>
+          <h3 class="area-card__title">Direito Empresarial</h3>
+          <p class="area-card__body">
+            Constituição e dissolução de sociedades, contratos comerciais, recuperação de crédito
+            e proteção patrimonial.
+          </p>
+          <a href="#contato" class="area-card__link">Consultar <span>→</span></a>
+        </article>
+
+        <article class="area-card">
+          <div class="area-card__icon" aria-hidden="true">👔</div>
+          <h3 class="area-card__title">Direito Trabalhista</h3>
+          <p class="area-card__body">
+            Defesa de empregados e empregadores, rescisões, horas extras, acidentes
+            de trabalho e negociações coletivas.
+          </p>
+          <a href="#contato" class="area-card__link">Consultar <span>→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTATO
+       PRÓXIMA PARTE: integrar com o sistema
+       de agendamento (Node.js + SQLite + WA)
+       Campos necessários: nome, telefone,
+       área de interesse, data preferida.
+       Validação client-side antes de enviar.
+  ═══════════════════════════════════════ -->
+
+    <!-- ═══════════════════ CONTATO ═══════════════════ -->
+    <section class="section contato" id="contato">
+      <div class="container">
+        <div class="contato__grid">
+          
+          <!-- Lado Esquerdo: Informações -->
+          <div data-reveal>
+            <span class="section__eyebrow">Fale Conosco</span>
+            <h2 class="section__title">Agende sua consulta<br>e proteja seus direitos</h2>
+            <p class="contato__body">
+              Estamos prontos para ouvir o seu caso. Preencha o formulário ao lado ou entre em contato diretamente pelos nossos canais de atendimento.
+            </p>
+            <ul class="contato__list">
+              <li>
+                <span class="contato__icon">📍</span>
+                Rua da Justiça, 123 - Centro, São Paulo - SP
+              </li>
+              <li>
+                <span class="contato__icon">📞</span>
+                (11) 99999-9999
+              </li>
+              <li>
+                <span class="contato__icon">✉️</span>
+                contato@seuescritorio.com.br
+              </li>
+              <li>
+                <span class="contato__icon">🕐</span>
+                Seg a Sex: 08:00 - 18:00
+              </li>
+            </ul>
+          </div>
+
+          <!-- Lado Direito: Formulário -->
+          <div data-reveal>
+            <!-- O ID 'lead-capture' é reconhecido pelo seu script LGPD -->
+            <form id="lead-capture" novalidate>
+              
+              <div class="form-group">
+                <label class="form-label" for="nome">Nome Completo</label>
+                <input class="form-input" type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">E-mail</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="telefone">Telefone / WhatsApp</label>
+                <input class="form-input" type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="mensagem">Descreva brevemente seu caso</label>
+                <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Conte-nos como podemos ajudá-lo..." required></textarea>
+              </div>
+
+              <!-- Checkbox LGPD: O 'name="lgpd_consent"' é obrigatório para o script funcionar -->
+              <div class="form-check">
+                <input type="checkbox" id="lgpd_consent" name="lgpd_consent">
+                <label for="lgpd_consent">
+                  Li e concordo com a <a href="#" target="_blank">Política de Privacidade</a> e autorizo o uso dos meus dados para contato.
+                </label>
+              </div>
+
+              <!-- O botão de submit -->
+              <button type="submit" class="btn btn--gold btn--full">
+                Enviar Mensagem
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  
+  <!--═══════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo">
+        <span class="logo__name">Ricardo</span>
+        <span class="logo__suffix">Advocacia</span>
+      </div>
+      <p class="footer__disclaimer">
+        Este site tem caráter exclusivamente informativo e não constitui oferta de serviços
+        jurídicos. OAB/MG nº 000.000. Comunicação institucional nos termos do Provimento 205/2021.
+      </p>
+      <p class="footer__copy">© 2025 Ricardo Advocacia. Desenvolvido por <a href="#" class="footer__dev">Dev Luiz</a>.</p>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Canvas de rachaduras -->
+  <script src="js/cracks.js"></script>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>
