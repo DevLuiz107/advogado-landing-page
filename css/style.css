@@ -401,6 +401,168 @@ button { font-family: inherit; cursor: pointer; }
 .section.contato .section__title   { color: var(--on-dark-1); }
 
 /* ═══════════════════════════════════════════════════════════
+   CARD PROFILE
+═══════════════════════════════════════════════════════════ */
+.card-profile {
+  position: absolute;
+  width: 30vw;
+  height: 30vh;
+  bottom: 80vh;
+  right: 10vw;
+  z-index: 2;
+  color: var(--on-dark-1);
+
+  /* Fundo semitransparente para o efeito vidro */
+  background: rgba(255, 255, 255, 0.08);
+
+  /* Blur só no que está ATRÁS do card */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+
+  /* Opcional: borda sutil para reforçar o efeito vidro */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+/* Foto */
+.card-profile__photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.card-profile__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter 0.4s;
+}
+.card-profile:hover .card-profile__photo {
+  filter: grayscale(0%) contrast(1.1);
+}
+
+/* Badge OAB sobre a foto */
+.card-profile__oab {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0D1008;
+  background: var(--gold);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* Corpo */
+.card-profile__body {
+  padding: 1rem 1.25rem 0.75rem;
+}
+
+.card-profile__label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.card-profile .typing {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--on-dark-1);
+  min-height: 1.5em;
+  line-height: 1.4;
+}
+
+/* Cursor */
+.cursor {
+  display: inline-block;
+  width: 1.5px;
+  height: 0.9em;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-left: 1px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Divisor */
+.card-profile__divider {
+  width: calc(100% - 2.5rem);
+  height: 1px;
+  background: var(--border-dark);
+  margin: 0 1.25rem;
+}
+
+/* Info */
+.card-profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.card-profile__info li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.card-profile__info-label {
+  font-size: 0.62rem;
+  color: var(--on-dark-3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.card-profile__info-value {
+  font-size: 0.75rem;
+  color: var(--on-dark-1);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* CTA */
+.card-profile__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0 1.25rem 1.25rem;
+  padding: 0.6rem 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0D1008;
+  background: var(--gold);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s var(--ease);
+}
+.card-profile__cta:hover {
+  background: var(--gold-dark);
+}
+
+@media (max-width: 860px) {
+  .card-profile { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════
    SOBRE
 ═══════════════════════════════════════════════════════════ */
 .sobre__grid {
@@ -550,6 +712,10 @@ button { font-family: inherit; cursor: pointer; }
 /* ═══════════════════════════════════════════════════════════
    FORMULÁRIO DE CONTATO
 ═══════════════════════════════════════════════════════════ */
+.form__error { font-size: .68rem; color: #e05c5c; margin-top: 2px; display: block; }
+[data-state="success"] { background: #2a7a3b; border-color: #2a7a3b; }
+[data-state="error"]   { background: #9b2525; border-color: #9b2525; }
+
 .form-group {
   margin-bottom: 1.25rem;
 }

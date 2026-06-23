@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — Rogerio Advocacia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="navbar" role="navigation" aria-label="Navegação principal">
+        <a href="/" class="logo" aria-label="Rogerio Advocacia — Página inicial">
+            <span class="logo__name">Rogerio</span>
+            <span class="logo__suffix"> Advocacia</span>
+        </a>
+
+        <ul class="nav__menu" role="list">
+            <li><a href="/" class="nav__link">Início</a></li>
+            <li><a href="#sobre" class="nav__link">Sobre</a></li>
+            <li><a href="#areas" class="nav__link">Áreas</a></li>
+            <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+
+        <a href="#contato" class="btn btn--outline">Fale Conosco</a>
+
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="nav__mobile" role="dialog" aria-label="Menu de navegação">
+        <ul role="list">
+            <li><a href="/" class="nav__link">Início</a></li>
+            <li><a href="#sobre" class="nav__link">Sobre</a></li>
+            <li><a href="#areas" class="nav__link">Áreas de Atuação</a></li>
+            <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--gold btn--full" style="margin-top: 0.75rem;">Fale Conosco</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CABEÇALHO DA PÁGINA
+    ═══════════════════════════════════════════════════════ -->
+    <header class="page-hero">
+        <div class="page-hero__deco"></div>
+        <div class="container">
+            <span class="page-hero__eyebrow" data-reveal>Documentos legais</span>
+            <h1 class="page-hero__title" data-reveal>Política de Privacidade</h1>
+            <div class="page-hero__meta" data-reveal>
+                <span class="page-hero__meta-item">
+                    <span class="page-hero__meta-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </span>
+                    Última atualização: 23 de junho de 2025
+                </span>
+                <span class="page-hero__meta-item">
+                    <span class="page-hero__meta-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </span>
+                    Vigência: Lei nº 13.709/2018 — LGPD
+                </span>
+                <span class="page-hero__meta-item">
+                    <span class="page-hero__meta-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </span>
+                    Leitura estimada: 8 minutos
+                </span>
+            </div>
+        </div>
+        <div class="page-hero__line"></div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SUMÁRIO
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="toc" aria-label="Sumário da política">
+        <div class="container">
+            <p class="toc__label" data-reveal>Sumário</p>
+            <ol class="toc__list" data-reveal>
+                <li><a href="#secao-1" class="toc__link"><span class="toc__num">01</span> Titularidade e Responsabilidade</a></li>
+                <li><a href="#secao-2" class="toc__link"><span class="toc__num">02</span> Dados Pessoais Coletados</a></li>
+                <li><a href="#secao-3" class="toc__link"><span class="toc__num">03</span> Finalidades do Tratamento</a></li>
+                <li><a href="#secao-4" class="toc__link"><span class="toc__num">04</span> Base Legal para o Tratamento</a></li>
+                <li><a href="#secao-5" class="toc__link"><span class="toc__num">05</span> Compartilhamento e Transferência de Dados</a></li>
+                <li><a href="#secao-6" class="toc__link"><span class="toc__num">06</span> Cookies e Tecnologias Semelhantes</a></li>
+                <li><a href="#secao-7" class="toc__link"><span class="toc__num">07</span> Segurança e Proteção dos Dados</a></li>
+                <li><a href="#secao-8" class="toc__link"><span class="toc__num">08</span> Direitos do Titular</a></li>
+                <li><a href="#secao-9" class="toc__link"><span class="toc__num">09</span> Retenção e Eliminação de Dados</a></li>
+                <li><a href="#secao-10" class="toc__link"><span class="toc__num">10</span> Alterações nesta Política</a></li>
+                <li><a href="#secao-11" class="toc__link"><span class="toc__num">11</span> Canais de Contato</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CONTEÚDO DA POLÍTICA
+    ═══════════════════════════════════════════════════════ -->
+    <main class="policy">
+        <div class="container">
+            <div class="policy__layout">
+
+                <article class="policy__content">
+
+                    <!-- Seção 1 -->
+                    <div class="policy__section" id="secao-1" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">01</span>
+                            <h2 class="policy__section-title">Titularidade e Responsabilidade</h2>
+                        </div>
+                        <p class="policy__text">
+                            A <strong>Ribeiro &amp; Associados Advocacia</strong> ("nós", "nosso" ou "Escritório"),
+                            inscrita no CNPJ sob o nº XX.XXX.XXX/0001-XX, com sede na [Endereço completo],
+                            é a <em>controladora</em> dos dados pessoais descritos nesta Política de Privacidade,
+                            nos termos da Lei nº 13.709, de 14 de agosto de 2018 — Lei Geral de Proteção de Dados
+                            Pessoais (LGPD).
+                        </p>
+                        <p class="policy__text">
+                            Esta Política estabelece como coletamos, utilizamos, armazenamos, compartilhamos e
+                            protegemos as informações pessoais dos visitantes e usuários deste site
+                            (<strong>"www.seudominio.com"</strong>), bem como de potenciais clientes e
+                            pessoas que interajam conosco por qualquer canal de atendimento.
+                        </p>
+                        <div class="policy__callout">
+                            <p class="policy__callout-text">
+                                <strong>Atenção:</strong> Ao acessar este site ou fornecer seus dados pessoais,
+                                você declara ter lido, compreendido e concordado com os termos desta Política.
+                                Caso não concorde com alguma disposição, recomendamos que não utilize nossos
+                                formulários ou serviços de contato.
+                            </p>
+                        </div>
+                        <p class="policy__text">
+                            O nosso <strong>Encarregado de Proteção de Dados (DPO)</strong> pode ser contatado
+                            através do e-mail <em>privacidade@seudominio.com</em>, sendo o canal oficial para
+                            solicitações relacionadas a direitos dos titulares, esclarecimentos e reclamações.
+                        </p>
+                    </div>
+
+                    <!-- Seção 2 -->
+                    <section class="policy__section" id="secao-2" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">02</span>
+                            <h2 class="policy__section-title">Dados Pessoais Coletados</h2>
+                        </div>
+                        <p class="policy__text">
+                            Os dados pessoais que coletamos podem ser classificados em duas categorias:
+                            <strong>dados fornecidos voluntariamente</strong> pelo titular e <strong>dados
+                            coletados automaticamente</strong> pela navegação no site.
+                        </p>
+
+                        <h3 class="policy__subtitle">2.1 Dados fornecidos voluntariamente</h3>
+                        <p class="policy__text">
+                            São aqueles que você nos informa diretamente ao utilizar nossos canais de contato:
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>Nome completo</strong> — para identificação e personalização do atendimento;</li>
+                            <li><strong>Endereço de e-mail</strong> — para resposta e follow-up de solicitações;</li>
+                            <li><strong>Telefone ou WhatsApp</strong> — para comunicação ágil quando necessário;</li>
+                            <li><strong>Assunto e conteúdo da mensagem</strong> — para compreender a demanda e direcionar ao profissional adequado;</li>
+                            <li><strong>Documentos e anexos</strong> — quando enviados voluntariamente para análise jurídica preliminar.</li>
+                        </ul>
+
+                        <h3 class="policy__subtitle">2.2 Dados coletados automaticamente</h3>
+                        <p class="policy__text">
+                            Quando você acessa nosso site, determinadas informações são registradas
+                            automaticamente por meio de tecnologias como cookies e logs de servidor:
+                        </p>
+
+                        <div class="policy__table-wrap">
+                            <table class="policy__table">
+                                <thead>
+                                    <tr>
+                                        <th>Dado</th>
+                                        <th>Descrição</th>
+                                        <th>Finalidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Endereço IP</strong></td>
+                                        <td>Identificador numérico do dispositivo</td>
+                                        <td>Segurança e análise estatística</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tipo de navegador</strong></td>
+                                        <td>Nome e versão do browser utilizado</td>
+                                        <td>Compatibilidade técnica</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sistema operacional</strong></td>
+                                        <td>Plataforma do dispositivo acessador</td>
+                                        <td>Otimização de experiência</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Páginas visitadas</strong></td>
+                                        <td>URLs e tempo de permanência</td>
+                                        <td>Melhoria de conteúdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Data e hora</strong></td>
+                                        <td>Registro temporal do acesso</td>
+                                        <td>Logs e auditoria</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dados de cookies</strong></td>
+                                        <td>Identificadores persistentes de sessão</td>
+                                        <td>Conforme Seção 6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="policy__text">
+                            <strong>Não coletamos</strong> dados sensíveis (origem racial ou étnica, convicção
+                            religiosa, dados de saúde, orientação sexual, etc.) de forma automática. Caso você
+                            os forneça voluntariamente em uma mensagem, o tratamento ocorrerá apenas com seu
+                            consentimento expresso e quando necessário à prestação do serviço jurídico.
+                        </p>
+                    </section>
+
+                    <!-- Seção 3 -->
+                    <section class="policy__section" id="secao-3" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">03</span>
+                            <h2 class="policy__section-title">Finalidades do Tratamento</h2>
+                        </div>
+                        <p class="policy__text">
+                            Os dados pessoais coletados são utilizados para as seguintes finalidades específicas:
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>Atendimento a solicitações:</strong> responder dúvidas, agendar consultas e fornecer informações sobre nossos serviços jurídicos;</li>
+                            <li><strong>Contratação de serviços:</strong> viabilizar a formalização de contrato de honorários advocatícios, quando aplicável;</li>
+                            <li><strong>Comunicação institucional:</strong> enviar atualizações relevantes sobre o Escritório, sempre com opt-in explícito do titular;</li>
+                            <li><strong>Cumprimento de obrigações legais:</strong> atender exigências de órgãos reguladores, o Conselho da OAB e a legislação vigente;</li>
+                            <li><strong>Segurança da informação:</strong> prevenir fraudes, acessos não autorizados e proteger a integridade dos sistemas;</li>
+                            <li><strong>Melhoria contínua:</strong> analisar padrões de navegação para aprimorar a estrutura, o conteúdo e a usabilidade do site.</li>
+                        </ul>
+                        <div class="policy__callout">
+                            <p class="policy__callout-text">
+                                Seus dados <strong>não serão utilizados</strong> para fins de marketing direto
+                                sem seu consentimento prévio e expresso, podendo ser revogado a qualquer momento.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Seção 4 -->
+                    <section class="policy__section" id="secao-4" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">04</span>
+                            <h2 class="policy__section-title">Base Legal para o Tratamento</h2>
+                        </div>
+                        <p class="policy__text">
+                            Cada operação de tratamento de dados pessoais realizada por este Escritório possui
+                            uma base legal prevista no <strong>art. 7º da LGPD</strong>, conforme indicado abaixo:
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>Consentimento do titular</strong> (art. 7º, I) — para comunicações de marketing e tratamento de dados sensíveis;</li>
+                            <li><strong>Execução de contrato ou procedimentos preliminares</strong> (art. 7º, V) — quando a coleta é necessária para a prestação de serviços jurídicos solicitados;</li>
+                            <li><strong>Legítimo interesse do controlador</strong> (art. 7º, IX) — para segurança da informação, melhoria do site e comunicações institucionais relevantes, sempre respeitando os direitos e liberdades do titular;</li>
+                            <li><strong>Cumprimento de obrigação legal ou regulatória</strong> (art. 7º, II) — para atender exigências da OAB, do Poder Judiciário e de outras autoridades competentes;</li>
+                            <li><strong>Exercício regular de direitos em processo judicial, administrativo ou arbitral</strong> (art. 7º, VI) — quando necessário à defesa dos interesses do Escritório ou de seus clientes.</li>
+                        </ul>
+                        <p class="policy__text">
+                            Quando o tratamento se basear em <em>legítimo interesse</em>, realizamos uma avaliação
+                            prévia para garantir que os direitos e liberdades do titular não sejam prevalentes.
+                            Essa avaliação encontra-se documentada internamente e pode ser solicitada ao DPO.
+                        </p>
+                    </section>
+
+                    <!-- Seção 5 -->
+                    <section class="policy__section" id="secao-5" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">05</span>
+                            <h2 class="policy__section-title">Compartilhamento e Transferência de Dados</h2>
+                        </div>
+                        <p class="policy__text">
+                            Seus dados pessoais <strong>não são vendidos, alugados ou comercializados</strong>
+                            com terceiros. O compartilhamento ocorre apenas nas hipóteses abaixo discriminadas:
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>Prestadores de serviço:</strong> empresas que atuam em nosso nome (hospedagem de site, envio de e-mails, análise de dados), sempre mediante contrato com cláusulas de proteção de dados;</li>
+                            <li><strong>Obrigações legais ou judiciais:</strong> quando determinado por autoridade competente, decisão judicial ou exigência regulatória;</li>
+                            <li><strong>Proteção de direitos:</strong> quando necessário para a defesa do Escritório em processos judiciais, administrativos ou arbitrais;</li>
+                            <li><strong>Parceiros de atuação conjunta:</strong> outros escritórios ou consultores, exclusivamente quando necessário ao atendimento da demanda específica do cliente, com seu conhecimento.</li>
+                        </ul>
+                        <p class="policy__text">
+                            Não realizamos <strong>transferências internacionais</strong> de dados pessoais.
+                            Caso essa necessidade venha a ocorrer futuramente, informaremos o titular e
+                            garantiremos as salvaguardas exigidas pelo art. 33 da LGPD.
+                        </p>
+                    </section>
+
+                    <!-- Seção 6 -->
+                    <section class="policy__section" id="secao-6" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">06</span>
+                            <h2 class="policy__section-title">Cookies e Tecnologias Semelhantes</h2>
+                        </div>
+                        <p class="policy__text">
+                            Este site utiliza <strong>cookies</strong> — pequenos arquivos de texto armazenados
+                            no seu dispositivo — para melhorar a experiência de navegação e coletar informações
+                            de uso. Os cookies utilizados se enquadram nas seguintes categorias:
+                        </p>
+
+                        <div class="policy__table-wrap">
+                            <table class="policy__table">
+                                <thead>
+                                    <tr>
+                                        <th>Categoria</th>
+                                        <th>Finalidade</th>
+                                        <th>Consentimento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Necessários</strong></td>
+                                        <td>Essenciais para o funcionamento básico do site (segurança, preferências de sessão)</td>
+                                        <td>Não exigido</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Analíticos</strong></td>
+                                        <td>Coletar dados agregados sobre navegação para melhorar o conteúdo e a estrutura do site</td>
+                                        <td>Exigido</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>De preferência</strong></td>
+                                        <td>Lembrar escolhas do usuário (idioma, região) para personalizar a experiência</td>
+                                        <td>Não exigido</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="policy__text">
+                            Você pode gerenciar ou desativar cookies a qualquer momento nas configurações do seu
+                            navegador. Informamos que a desativação de cookies necessários pode comprometer
+                            o funcionamento adequado do site.
+                        </p>
+                    </section>
+
+                    <!-- Seção 7 -->
+                    <section class="policy__section" id="secao-7" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">07</span>
+                            <h2 class="policy__section-title">Segurança e Proteção dos Dados</h2>
+                        </div>
+                        <p class="policy__text">
+                            Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados
+                            pessoais contra acessos não autorizados, destruição, perda, alteração ou qualquer
+                            forma de tratamento inadequado. Entre as medidas adotadas, destacam-se:
+                        </p>
+                        <ul class="policy__list">
+                            <li>Comunicação criptografada via <strong>protocolo HTTPS/TLS</strong>;</li>
+                            <li>Controle de acesso baseado em <strong>princípio do menor privilégio</strong>;</li>
+                            <li>Monitoramento contínuo de <strong>vulnerabilidades e incidentes</strong>;</li>
+                            <li>Treinamento periódico da equipe em <strong>proteção de dados e segurança da informação</strong>;</li>
+                            <li>Backup regular e <strong>plano de resposta a incidentes</strong> documentado.</li>
+                        </ul>
+                        <p class="policy__text">
+                            Apesar de nossos esforços, nenhum sistema é inteiramente imune a riscos. Em caso de
+                            <strong>incidente de segurança</strong> que possa acarretar risco ou dano relevante
+                            aos titulares, comunicaremos a autoridade nacional (ANPD) e os titulares afetados
+                            conforme o art. 48 da LGPD, em prazo razoável após o conhecimento do fato.
+                        </p>
+                    </section>
+
+                    <!-- Seção 8 -->
+                    <section class="policy__section" id="secao-8" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">08</span>
+                            <h2 class="policy__section-title">Direitos do Titular</h2>
+                        </div>
+                        <p class="policy__text">
+                            A LGPD garante a você, titular dos dados pessoais, os seguintes direitos, que podem
+                            ser exercidos a qualquer momento mediante solicitação ao nosso DPO
+                            (<em>privacidade@seudominio.com</em>):
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>Confirmação e acesso:</strong> saber se tratamos seus dados e acessá-los;</li>
+                            <li><strong>Correção:</strong> solicitar a atualização de dados incompletos, inexatos ou desatualizados;</li>
+                            <li><strong>Anonimização, bloqueio ou eliminação:</strong> requerer o tratamento adequado de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD;</li>
+                            <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado e de uso corrente, ou solicitar sua transmissão a outro fornecedor;</li>
+                            <li><strong>Eliminação dos dados tratados com consentimento:</strong> revogar o consentimento e solicitar a exclusão dos dados vinculados a ele;</li>
+                            <li><strong>Informação sobre compartilhamento:</strong> saber com quais entidades públicas e privadas seus dados foram compartilhados;</li>
+                            <li><strong>Revogação do consentimento:</strong> retirar o consentimento previamente dado, sem comprometer a licitude do tratamento anterior;</li>
+                            <li><strong>Oposição:</strong> opor-se ao tratamento realizado com fundamento em hipótese de dispensa de consentimento, em caso de descumprimento da LGPD;</li>
+                            <li><strong>Revisão de decisões automatizadas:</strong> solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado de dados.</li>
+                        </ul>
+                        <div class="policy__callout">
+                            <p class="policy__callout-text">
+                                As solicitações serão respondidas no prazo de até <strong>15 (quinze) dias</strong>,
+                                conforme previsto no art. 18, § 5º, da LGPD. Em casos de complexidade excepcional,
+                                o prazo poderá ser prorrogado por igual período, mediante justificativa.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Seção 9 -->
+                    <section class="policy__section" id="secao-9" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">09</span>
+                            <h2 class="policy__section-title">Retenção e Eliminação de Dados</h2>
+                        </div>
+                        <p class="policy__text">
+                            Os dados pessoais serão conservados pelo período necessário para cumprir as
+                            finalidades para as quais foram coletados, observados os seguintes critérios:
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>Dados de formulário de contato:</strong> armazenados pelo prazo máximo de <em>2 (dois) anos</em> após o último contato, salvo se houver relação contratual vigente;</li>
+                            <li><strong>Dados contratuais e de clientes:</strong> mantidos durante a vigência do contrato e pelo prazo prescricional aplicável (geralmente 5 a 10 anos, conforme a natureza da demanda);</li>
+                            <li><strong>Logs de acesso e cookies analíticos:</strong> retidos por até <em>6 (seis) meses</em>;</li>
+                            <li><strong>Dados tratados com base em consentimento:</strong> eliminados quando o consentimento for revogado, salvo se houver outra base legal aplicável.</li>
+                        </ul>
+                        <p class="policy__text">
+                            Após o término do período de retenção, os dados serão <strong>eliminados de forma
+                            segura</strong> ou anonimizados, de modo a impossibilitar a identificação do titular,
+                            salvo quando a manutenção for exigida por lei ou regulamento.
+                        </p>
+                    </section>
+
+                    <!-- Seção 10 -->
+                    <section class="policy__section" id="secao-10" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">10</span>
+                            <h2 class="policy__section-title">Alterações nesta Política</h2>
+                        </div>
+                        <p class="policy__text">
+                            Esta Política de Privacidade poderá ser atualizada periodicamente para refletir
+                            mudanças em nossas práticas de tratamento, alterações legislativas ou regulatórias,
+                            ou para aprimorar a clareza das informações fornecidas.
+                        </p>
+                        <p class="policy__text">
+                            Toda alteração relevante será comunicada por meio de <strong>aviso conspicuo</strong>
+                            nesta página, com a atualização da data de "Última atualização" indicada no cabeçalho.
+                            Em casos de mudanças substanciais que afetem os direitos dos titulares, poderemos
+                            adotar medidas adicionais de comunicação, como envio de notificação por e-mail.
+                        </p>
+                        <p class="policy__text">
+                            Recomendamos que você <strong>consulte esta página regularmente</strong> para se manter
+                            informado sobre como protegemos seus dados pessoais.
+                        </p>
+                    </section>
+
+                    <!-- Seção 11 -->
+                    <section class="policy__section" id="secao-11" data-reveal>
+                        <div class="policy__section-header">
+                            <span class="policy__section-num">11</span>
+                            <h2 class="policy__section-title">Canais de Contato</h2>
+                        </div>
+                        <p class="policy__text">
+                            Para exercer seus direitos como titular, esclarecer dúvidas sobre esta Política ou
+                            apresentar reclamações relacionadas ao tratamento de dados pessoais, utilize um dos
+                            canais abaixo:
+                        </p>
+                        <ul class="policy__list">
+                            <li><strong>E-mail do DPO:</strong> <em>privacidade@seudominio.com</em></li>
+                            <li><strong>E-mail geral:</strong> <em>contato@seudominio.com</em></li>
+                            <li><strong>Telefone:</strong> (XX) XXXX-XXXX</li>
+                            <li><strong>WhatsApp:</strong> (XX) XXXXX-XXXX</li>
+                            <li><strong>Endereço:</strong> [Endereço completo da sede do Escritório]</li>
+                        </ul>
+                        <p class="policy__text">
+                            Caso entenda que o tratamento dos seus dados pessoais viola a LGPD, você também
+                            pode apresentar uma <strong>reclamação perante a Autoridade Nacional de Proteção
+                            de Dados (ANPD)</strong> por meio do site oficial: <em>www.gov.br/anpd</em>.
+                        </p>
+                    </section>
+
+                </article>
+
+                <!-- Barra lateral de progresso de leitura -->
+                <aside class="policy__sidebar" aria-hidden="true">
+                    <div class="progress-bar">
+                        <div class="progress-bar__track">
+                            <div class="progress-bar__fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-bar__label">Progresso de leitura</span>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         RODAPÉ DA PÁGINA
+    ═══════════════════════════════════════════════════════ -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="page-footer__inner">
+                <a href="/" class="page-footer__back">
+                    <span>←</span> Voltar ao site
+                </a>
+                <p class="page-footer__copy">
+                    &copy; 2025 Ribeiro &amp; Associados. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FOOTER GLOBAL
+    ═══════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__disclaimer">
+                    O conteúdo deste site é de caráter informativo e não constitui aconselhamento jurídico.
+                    A contratação de serviços jurídicos depende de análise individualizada de cada caso.
+                </p>
+                <p class="footer__copy">
+                    &copy; 2025 Ribeiro &amp; Associados Advocacia —
+                    <a href="mailto:contato@seudominio.com" class="footer__dev">contato@seudominio.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

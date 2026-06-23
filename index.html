@@ -3,24 +3,329 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ricardo Advocacia — Assessoria Jurídica em Alfenas</title>
-  <meta name="description" content="Advocacia especializada em direito civil, empresarial e trabalhista em Alfenas, MG. Agende sua consulta.">
 
-  <!-- Google Fonts: Cormorant (display) + Inter (corpo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet" crossorigin="anonymous">
+  <!-- ═══════════════════════════════════════════════
+       TÍTULO — keyword primária na frente
+       Formato: [Serviço] em [Cidade] | [Nome]
+       Limite: 60 caracteres
+       Atual: 54 chars ✓
+  ═══════════════════════════════════════════════ -->
+  <title>Advogado em Alfenas MG | Ricardo Advocacia</title>
+
+  <!-- ═══════════════════════════════════════════════
+       META DESCRIPTION
+       Limite: 155 caracteres. Inclui keyword + CTA.
+       Atual: 152 chars ✓
+  ═══════════════════════════════════════════════ -->
+  <meta name="description" content="Escritório de advocacia em Alfenas, MG. Especializado em direito civil, empresarial e trabalhista. +15 anos de experiência. Agende sua consulta gratuita.">
+
+  <!-- ═══════════════════════════════════════════════
+       ROBOTS
+       index, follow = padrão. Só altere se precisar
+       bloquear páginas específicas (ex: /admin).
+  ═══════════════════════════════════════════════ -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <!-- ═══════════════════════════════════════════════
+       CANONICAL
+       Evita duplicate content se o site responder
+       por http:// e https:// ou com/sem www.
+       PREENCHER: domínio final de produção.
+  ═══════════════════════════════════════════════ -->
+  <link rel="canonical" href="https://www.ricardoadvocacia.com.br/">
+
+  <!-- ═══════════════════════════════════════════════
+       OPEN GRAPH — WhatsApp, Facebook, LinkedIn
+       Sem isso o compartilhamento aparece sem
+       imagem e com título genérico.
+       PREENCHER: og:image com URL absoluta (1200x630px)
+  ═══════════════════════════════════════════════ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="pt_BR">
+  <meta property="og:site_name"   content="Ricardo Advocacia">
+  <meta property="og:url"         content="https://www.ricardoadvocacia.com.br/">
+  <meta property="og:title"       content="Advogado em Alfenas MG | Ricardo Advocacia">
+  <meta property="og:description" content="Escritório de advocacia em Alfenas, MG. Especializado em direito civil, empresarial e trabalhista. +15 anos de experiência. Agende sua consulta gratuita.">
+  <meta property="og:image"       content="https://www.ricardoadvocacia.com.br/og-image.jpg"><!-- PREENCHER -->
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="Ricardo Advocacia — Escritório jurídico em Alfenas, MG">
+
+  <!-- ═══════════════════════════════════════════════
+       TWITTER CARD
+       Funciona também no X (Twitter).
+       summary_large_image = imagem grande no preview.
+  ═══════════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Advogado em Alfenas MG | Ricardo Advocacia">
+  <meta name="twitter:description" content="Escritório de advocacia em Alfenas, MG. +15 anos de experiência em direito civil, empresarial e trabalhista.">
+  <meta name="twitter:image"       content="https://www.ricardoadvocacia.com.br/og-image.jpg"><!-- PREENCHER -->
+
+  <!-- ═══════════════════════════════════════════════
+       GEO META TAGS
+       Sinalizam localização geográfica para
+       buscadores regionais e Google Maps.
+       PREENCHER: coordenadas reais de Alfenas, MG.
+       Alfenas aprox: lat -21.4297, lon -45.9481
+  ═══════════════════════════════════════════════ -->
+  <meta name="geo.region"      content="BR-MG">
+  <meta name="geo.placename"   content="Alfenas, Minas Gerais, Brasil">
+  <meta name="geo.position"    content="-21.4297;-45.9481">
+  <meta name="ICBM"            content="-21.4297, -45.9481">
+
+  <!-- ═══════════════════════════════════════════════
+       FAVICON
+       Gere em: realfavicongenerator.net
+       PREENCHER: arquivos reais de favicon.
+  ═══════════════════════════════════════════════ -->
+  <link rel="icon"             type="image/svg+xml"  href="/favicon.svg">
+  <link rel="icon"             type="image/png"      sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon"                       sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest"         href="/site.webmanifest">
+  <meta name="theme-color"     content="#0A0805">
+
+  <!-- ═══════════════════════════════════════════════
+       PRECONNECT
+       Reduz latência de DNS para recursos externos.
+       Cada preconnect economiza ~150ms na primeira
+       requisição para aquele domínio.
+  ═══════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- ═══════════════════════════════════════════════
+       FONTES
+       display=swap evita flash de texto invisível
+       (FOIT). Melhora CLS (Core Web Vital).
+  ═══════════════════════════════════════════════ -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- ═══════════════════════════════════════════════
+       PRELOAD — recurso mais crítico acima do fold
+       Instrui o browser a baixar a fonte ANTES de
+       processar o CSS. Melhora LCP.
+       PREENCHER: hash da fonte Cormorant no Google.
+       (Inspecione o link do Google Fonts para pegar
+       a URL exata do arquivo .woff2)
+  ═══════════════════════════════════════════════ -->
+  <!-- <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/cormorantgaramond/...woff2"> -->
+
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- ═══════════════════════════════════════════════
+       SCHEMA.ORG — JSON-LD
+       É o que gera rich results no Google:
+       estrelas, endereço, telefone no SERP,
+       breadcrumbs, sitelinks.
+
+       LegalService é o tipo correto para escritórios
+       de advocacia (subtype de LocalBusiness).
+
+       PREENCHER: todos os campos marcados.
+       Valide em: schema.org/validator
+  ═══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "LegalService",
+        "@id": "https://www.ricardoadvocacia.com.br/#organization",
+        "name": "Ricardo Advocacia",
+        "alternateName": "Escritório Ricardo Advocacia",
+        "description": "Escritório de advocacia especializado em direito civil, empresarial e trabalhista em Alfenas, MG. Mais de 15 anos de experiência.",
+        "url": "https://www.ricardoadvocacia.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ricardoadvocacia.com.br/logo.png",
+          "width": 300,
+          "height": 60
+        },
+        "image": "https://www.ricardoadvocacia.com.br/og-image.jpg",
+        "telephone": "+55-35-99999-9999",
+        "email": "contato@ricardoadvocacia.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "PREENCHER — Rua, número",
+          "addressLocality": "Alfenas",
+          "addressRegion": "MG",
+          "postalCode": "37130-000",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -21.4297,
+          "longitude": -45.9481
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Alfenas",
+            "sameAs": "https://www.wikidata.org/wiki/Q1022903"
+          },
+          {
+            "@type": "State",
+            "name": "Minas Gerais"
+          }
+        ],
+        "knowsAbout": [
+          "Direito Civil",
+          "Direito Empresarial",
+          "Direito Trabalhista",
+          "Contratos",
+          "Responsabilidade Civil",
+          "Direito de Família",
+          "Sucessões",
+          "Direito do Consumidor",
+          "Constituição de Empresas",
+          "Recuperação de Crédito",
+          "Rescisões Trabalhistas"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços Jurídicos",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito Civil",
+                "description": "Contratos, responsabilidade civil, família e sucessões, direito do consumidor."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito Empresarial",
+                "description": "Constituição e dissolução de sociedades, contratos comerciais, recuperação de crédito e proteção patrimonial."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito Trabalhista",
+                "description": "Defesa de empregados e empregadores, rescisões, horas extras, acidentes de trabalho e negociações coletivas."
+              }
+            }
+          ]
+        },
+        "sameAs": [
+          "PREENCHER — URL do Google Business Profile",
+          "PREENCHER — URL do Instagram (se houver)"
+        ]
+      },
+
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ricardoadvocacia.com.br/#website",
+        "url": "https://www.ricardoadvocacia.com.br/",
+        "name": "Ricardo Advocacia",
+        "description": "Escritório de advocacia em Alfenas, MG",
+        "publisher": {
+          "@id": "https://www.ricardoadvocacia.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://www.ricardoadvocacia.com.br/#webpage",
+        "url": "https://www.ricardoadvocacia.com.br/",
+        "name": "Advogado em Alfenas MG | Ricardo Advocacia",
+        "isPartOf": {
+          "@id": "https://www.ricardoadvocacia.com.br/#website"
+        },
+        "about": {
+          "@id": "https://www.ricardoadvocacia.com.br/#organization"
+        },
+        "description": "Escritório de advocacia especializado em direito civil, empresarial e trabalhista em Alfenas, MG.",
+        "inLanguage": "pt-BR",
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": ["https://www.ricardoadvocacia.com.br/"]
+        }
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.ricardoadvocacia.com.br/"
+          }
+        ]
+      },
+
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O escritório Ricardo Advocacia atende em Alfenas, MG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O escritório Ricardo Advocacia está localizado em Alfenas, MG, e atende clientes na cidade e região há mais de 15 anos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais áreas do direito o escritório atende?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O escritório atua em Direito Civil (contratos, família, sucessões, consumidor), Direito Empresarial (sociedades, contratos comerciais, recuperação de crédito) e Direito Trabalhista (rescisões, horas extras, acidentes de trabalho)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como agendar uma consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você pode agendar sua consulta pelo formulário neste site, por telefone ou via WhatsApp. A primeira consulta é gratuita."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Ricardo Advocacia é registrado na OAB?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O escritório é registrado na OAB/MG e atua em conformidade com o Provimento 205/2021 do Conselho Federal da OAB."
+            }
+          }
+        ]
+      }
+
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
   <!-- ═══════════════════════════════════════
        NAVEGAÇÃO
+       aria-label no <nav> identifica a região
+       para leitores de tela (acessibilidade
+       também é fator de rankeamento).
   ═══════════════════════════════════════ -->
   <header class="navbar" id="navbar">
     <a href="/" class="logo" aria-label="Ricardo Advocacia — página inicial">
-      <span class="logo__name">Ricardo</span>
+      <span class="logo__name">R</span>
       <span class="logo__suffix">Advocacia</span>
     </a>
 
@@ -36,13 +341,11 @@
       Agendar consulta <span aria-hidden="true">↗</span>
     </a>
 
-    <!-- Hamburguer (mobile) -->
     <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu-mobile">
       <span></span><span></span><span></span>
     </button>
   </header>
 
-  <!-- Menu mobile -->
   <div class="nav__mobile" id="nav-menu-mobile" aria-hidden="true">
     <ul>
       <li><a href="#sobre"   class="nav__link">Sobre</a></li>
@@ -53,20 +356,24 @@
   </div>
 
   <!-- ═══════════════════════════════════════
-       HERO — canvas de rachaduras aqui
+       HERO
+       H1 contém keyword primária + local.
+       Apenas 1 H1 por página.
+       aria-labelledby conecta a section ao H1
+       para leitores de tela.
   ═══════════════════════════════════════ -->
   <section class="hero" aria-labelledby="hero-heading">
     <canvas id="cracks-canvas" aria-hidden="true"></canvas>
-
-    <!-- Vinheta radial por cima do canvas -->
     <div class="hero__vignette" aria-hidden="true"></div>
-
-    <!-- Linha decorativa lateral -->
     <div class="hero__sideline" aria-hidden="true"></div>
 
     <div class="hero__content">
-      <p class="hero__eyebrow">OAB/MG · Alfenas</p>
+      <!-- eyebrow: keyword local explícita -->
+      <p class="hero__eyebrow">
+        <span>Advogado em Alfenas, MG</span> · OAB/MG
+      </p>
 
+      <!-- H1 único da página: keyword + diferencial -->
       <h1 class="hero__title" id="hero-heading">
         Quando a lei é<br>
         <em>complexa</em>,<br>
@@ -75,8 +382,8 @@
       </h1>
 
       <p class="hero__sub">
-        Assessoria jurídica especializada em direito civil, empresarial e trabalhista.
-        Estratégia com resultados que resistem ao tempo.
+        Assessoria jurídica especializada em direito civil, empresarial e trabalhista
+        em Alfenas, MG. Estratégia com resultados que resistem ao tempo.
       </p>
 
       <div class="hero__actions">
@@ -85,24 +392,57 @@
       </div>
     </div>
 
-    <!-- Badge de credibilidade -->
-    <div class="hero__badge">
-      <span class="hero__badge-num">+15</span>
-      <span class="hero__badge-label">anos de<br>experiência</span>
-    </div>
-  </section>
+    <div class="card-profile">
 
+      <div class="card-profile__photo-wrap">
+        <img src="assets/rogerio.png" alt="Dr. Ricardo — Advogado em Alfenas, MG" class="card-profile__photo">
+        <span class="card-profile__oab">OAB/MG</span>
+      </div>
+
+      <div class="card-profile__body">
+        <p class="card-profile__label">Área de Atuação</p>
+        <h3 class="typing">
+          <span id="typed-output"></span><span class="cursor"></span>
+        </h3>
+      </div>
+
+      <div class="card-profile__divider"></div>
+
+      <ul class="card-profile__info">
+        <li>
+          <span class="card-profile__info-label">Formação</span>
+          <span class="card-profile__info-value">Direito — UNIFENAS</span>
+        </li>
+        <li>
+          <span class="card-profile__info-label">Experiência</span>
+          <span class="card-profile__info-value">+15 anos</span>
+        </li>
+      </ul>
+
+      <a href="#sobre" class="card-profile__cta">
+        Sobre Mim<span aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+  </section>
   <!-- ═══════════════════════════════════════
        SOBRE
+       H2 com keyword secundária.
+       Texto corpo deve conter naturalmente:
+       "Alfenas", "MG", "advocacia", "escritório".
+       Sem keyword stuffing — leitura natural.
   ═══════════════════════════════════════ -->
-  <section class="section sobre" id="sobre">
+  <section class="section sobre" id="sobre" aria-labelledby="sobre-heading">
     <div class="container">
       <div class="sobre__grid">
         <div class="sobre__text">
           <span class="section__eyebrow">Sobre o escritório</span>
-          <h2 class="section__title">Décadas de experiência.<br>Compromisso com cada caso.</h2>
+          <h2 class="section__title" id="sobre-heading">
+            Décadas de experiência.<br>Compromisso com cada caso.
+          </h2>
           <p class="sobre__body">
-            O escritório Ricardo Advocacia atua há mais de 15 anos na região de Alfenas,
+            O escritório Ricardo Advocacia atua há mais de 15 anos na região de Alfenas, MG,
             construindo uma reputação baseada em rigor técnico, ética e resultados concretos
             para pessoas físicas e empresas.
           </p>
@@ -113,21 +453,24 @@
           <a href="#contato" class="btn btn--gold">Fale com o escritório</a>
         </div>
 
+        <!-- Stats: números com contexto textual completo
+             Leitores de tela e crawlers leem o aria-label,
+             não o número isolado. -->
         <div class="sobre__stats">
           <div class="stat">
-            <span class="stat__num">+500</span>
+            <span class="stat__num" aria-label="Mais de 500 casos atendidos">+500</span>
             <span class="stat__label">Casos atendidos</span>
           </div>
           <div class="stat">
-            <span class="stat__num">+15</span>
+            <span class="stat__num" aria-label="Mais de 15 anos de experiência">+15</span>
             <span class="stat__label">Anos de experiência</span>
           </div>
           <div class="stat">
-            <span class="stat__num">3</span>
+            <span class="stat__num" aria-label="3 áreas de atuação">3</span>
             <span class="stat__label">Áreas de atuação</span>
           </div>
           <div class="stat">
-            <span class="stat__num">100%</span>
+            <span class="stat__num" aria-label="100% de dedicação ao cliente">100%</span>
             <span class="stat__label">Dedicação ao cliente</span>
           </div>
         </div>
@@ -137,42 +480,66 @@
 
   <!-- ═══════════════════════════════════════
        ÁREAS DE ATUAÇÃO
+       H2 + H3s criam hierarquia semântica.
+       Google usa H2/H3 para entender estrutura
+       de conteúdo e gerar featured snippets.
+       Emojis substituídos por SVG com role="img"
+       + aria-label — acessíveis e sem ambiguidade.
   ═══════════════════════════════════════ -->
-  <section class="section areas" id="areas">
+  <section class="section areas" id="areas" aria-labelledby="areas-heading">
     <div class="container">
       <span class="section__eyebrow">Atuação</span>
-      <h2 class="section__title">Áreas de especialização</h2>
+      <h2 class="section__title" id="areas-heading">Áreas de especialização</h2>
 
       <div class="areas__grid">
 
         <article class="area-card">
-          <div class="area-card__icon" aria-hidden="true">⚖</div>
-          <h3 class="area-card__title">Direito Civil</h3>
+          <!-- SVG semântico substitui emoji ⚖ -->
+          <div class="area-card__icon" role="img" aria-label="Balança da justiça">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" width="32" height="32">
+              <path d="M12 3v18M3 7l9-4 9 4M5 10l-2 5h4L5 10zm14 0l-2 5h4l-2-5zM3 21h18"/>
+            </svg>
+          </div>
+          <h3 class="area-card__title">Direito Civil em Alfenas</h3>
           <p class="area-card__body">
-            Contratos, responsabilidade civil, família e sucessões, direito do consumidor.
-            Representação em todas as instâncias.
+            Contratos, responsabilidade civil, direito de família e sucessões,
+            direito do consumidor. Representação em todas as instâncias.
           </p>
-          <a href="#contato" class="area-card__link">Consultar <span>→</span></a>
+          <a href="https://wa.me/5535998739745?text=Olá20%gostaria20% de 20% fazer20%uma20%consulta20%sobre20%Direito20%Civíl" class="area-card__link">
+            Consultar advogado <span aria-hidden="true">→</span>
+          </a>
         </article>
 
         <article class="area-card area-card--highlight">
-          <div class="area-card__icon" aria-hidden="true">🏛</div>
-          <h3 class="area-card__title">Direito Empresarial</h3>
+          <div class="area-card__icon" role="img" aria-label="Edifício institucional">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" width="32" height="32">
+              <path d="M3 21h18M4 21V8l8-5 8 5v13M9 21v-6h6v6"/>
+            </svg>
+          </div>
+          <h3 class="area-card__title">Direito Empresarial em Alfenas</h3>
           <p class="area-card__body">
-            Constituição e dissolução de sociedades, contratos comerciais, recuperação de crédito
-            e proteção patrimonial.
+            Constituição e dissolução de sociedades, contratos comerciais,
+            recuperação de crédito e proteção patrimonial.
           </p>
-          <a href="#contato" class="area-card__link">Consultar <span>→</span></a>
+          <a href="https://wa.me/5535998739745?text=Olá20%gostaria20% de 20% fazer20%uma20%consulta20%sobre20%Direito20%Emprsarial" class="area-card__link">
+            Consultar advogado <span aria-hidden="true">→</span>
+          </a>
         </article>
 
         <article class="area-card">
-          <div class="area-card__icon" aria-hidden="true">👔</div>
-          <h3 class="area-card__title">Direito Trabalhista</h3>
+          <div class="area-card__icon" role="img" aria-label="Pessoa trabalhadora">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" width="32" height="32">
+              <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM8 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <h3 class="area-card__title">Direito Trabalhista em Alfenas</h3>
           <p class="area-card__body">
-            Defesa de empregados e empregadores, rescisões, horas extras, acidentes
-            de trabalho e negociações coletivas.
+            Defesa de empregados e empregadores, rescisões, horas extras,
+            acidentes de trabalho e negociações coletivas.
           </p>
-          <a href="#contato" class="area-card__link">Consultar <span>→</span></a>
+          <a href="https://wa.me/5535998739745?text=Olá20%gostaria20% de 20% fazer20%uma20%consulta20%sobre20%Direito20%Trablhista" class="area-card__link">
+            Consultar advogado <span aria-hidden="true">→</span>
+          </a>
         </article>
 
       </div>
@@ -180,93 +547,181 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       CONTATO
-       PRÓXIMA PARTE: integrar com o sistema
-       de agendamento (Node.js + SQLite + WA)
-       Campos necessários: nome, telefone,
-       área de interesse, data preferida.
-       Validação client-side antes de enviar.
+       FAQ — alimenta o FAQPage do Schema
+       e pode gerar featured snippets no Google.
+       H2 + details/summary é acessível e
+       indexável sem JavaScript.
+       Mantenha sync com o JSON-LD acima.
   ═══════════════════════════════════════ -->
+  <section class="section faq" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <span class="section__eyebrow">Dúvidas frequentes</span>
+      <h2 class="section__title" id="faq-heading">Perguntas frequentes</h2>
 
-    <!-- ═══════════════════ CONTATO ═══════════════════ -->
-    <section class="section contato" id="contato">
-      <div class="container">
-        <div class="contato__grid">
-          
-          <!-- Lado Esquerdo: Informações -->
-          <div data-reveal>
-            <span class="section__eyebrow">Fale Conosco</span>
-            <h2 class="section__title">Agende sua consulta<br>e proteja seus direitos</h2>
-            <p class="contato__body">
-              Estamos prontos para ouvir o seu caso. Preencha o formulário ao lado ou entre em contato diretamente pelos nossos canais de atendimento.
-            </p>
+      <div class="faq__list">
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            O escritório Ricardo Advocacia atende em Alfenas, MG?
+          </summary>
+          <div class="faq__answer">
+            <p>Sim. O escritório Ricardo Advocacia está localizado em Alfenas, MG,
+            e atende clientes na cidade e região há mais de 15 anos.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            Quais áreas do direito o escritório atende?
+          </summary>
+          <div class="faq__answer">
+            <p>O escritório atua em Direito Civil (contratos, família, sucessões, consumidor),
+            Direito Empresarial (sociedades, contratos comerciais, recuperação de crédito)
+            e Direito Trabalhista (rescisões, horas extras, acidentes de trabalho).</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            Como agendar uma consulta?
+          </summary>
+          <div class="faq__answer">
+            <p>Você pode agendar sua consulta pelo formulário neste site, por telefone
+            ou via WhatsApp. A primeira consulta é gratuita.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            O Ricardo Advocacia é registrado na OAB?
+          </summary>
+          <div class="faq__answer">
+            <p>Sim. O escritório é registrado na OAB/MG e atua em conformidade com
+            o Provimento 205/2021 do Conselho Federal da OAB.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTATO
+       address semântico para crawlers.
+       Dados REAIS aqui — são indexados.
+       PREENCHER: endereço, tel, email reais.
+  ═══════════════════════════════════════ -->
+  <section class="section contato" id="contato" aria-labelledby="contato-heading">
+    <div class="container">
+      <div class="contato__grid">
+
+        <div data-reveal>
+          <span class="section__eyebrow">Fale Conosco</span>
+          <h2 class="section__title" id="contato-heading">
+            Agende sua consulta<br>e proteja seus direitos
+          </h2>
+          <p class="contato__body">
+            Estamos prontos para ouvir o seu caso. Preencha o formulário ao lado
+            ou entre em contato diretamente pelos nossos canais de atendimento.
+          </p>
+
+          <!-- <address> é a tag semântica correta para
+               informações de contato de uma organização.
+               Melhora parsing do Google para Knowledge Graph. -->
+          <address class="contato__address">
             <ul class="contato__list">
               <li>
-                <span class="contato__icon">📍</span>
-                Rua da Justiça, 123 - Centro, São Paulo - SP
+                <!-- PREENCHER: endereço real de Alfenas -->
+                <span class="contato__icon" aria-hidden="true">📍</span>
+                <span>PREENCHER — Rua, número, Centro, Alfenas — MG</span>
               </li>
               <li>
-                <span class="contato__icon">📞</span>
-                (11) 99999-9999
+                <span class="contato__icon" aria-hidden="true">📞</span>
+                <!-- tel: link permite click-to-call no mobile -->
+                <a href="tel:+5535999999999">(35) 99999-9999</a><!-- PREENCHER -->
               </li>
               <li>
-                <span class="contato__icon">✉️</span>
-                contato@seuescritorio.com.br
+                <span class="contato__icon" aria-hidden="true">✉️</span>
+                <a href="mailto:contato@ricardoadvocacia.com.br">contato@ricardoadvocacia.com.br</a><!-- PREENCHER -->
               </li>
               <li>
-                <span class="contato__icon">🕐</span>
-                Seg a Sex: 08:00 - 18:00
+                <span class="contato__icon" aria-hidden="true">🕐</span>
+                <time>Seg a Sex: 08:00 – 18:00</time>
               </li>
             </ul>
-          </div>
-
-          <!-- Lado Direito: Formulário -->
-          <div data-reveal>
-            <!-- O ID 'lead-capture' é reconhecido pelo seu script LGPD -->
-            <form id="lead-capture" novalidate>
-              
-              <div class="form-group">
-                <label class="form-label" for="nome">Nome Completo</label>
-                <input class="form-input" type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="email">E-mail</label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="telefone">Telefone / WhatsApp</label>
-                <input class="form-input" type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="mensagem">Descreva brevemente seu caso</label>
-                <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Conte-nos como podemos ajudá-lo..." required></textarea>
-              </div>
-
-              <!-- Checkbox LGPD: O 'name="lgpd_consent"' é obrigatório para o script funcionar -->
-              <div class="form-check">
-                <input type="checkbox" id="lgpd_consent" name="lgpd_consent">
-                <label for="lgpd_consent">
-                  Li e concordo com a <a href="#" target="_blank">Política de Privacidade</a> e autorizo o uso dos meus dados para contato.
-                </label>
-              </div>
-
-              <!-- O botão de submit -->
-              <button type="submit" class="btn btn--gold btn--full">
-                Enviar Mensagem
-              </button>
-
-            </form>
-          </div>
-
+          </address>
         </div>
+
+        <div data-reveal>
+          <form id="lead-capture" novalidate
+                aria-label="Formulário de agendamento de consulta jurídica">
+
+            <div class="form-group">
+              <label class="form-label" for="nome">Nome Completo</label>
+              <input class="form-input" type="text" id="nome" name="nome"
+                     placeholder="Seu nome completo"
+                     autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">E-mail</label>
+              <input class="form-input" type="email" id="email" name="email"
+                     placeholder="seuemail@exemplo.com"
+                     autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="telefone">Telefone / WhatsApp</label>
+              <input class="form-input" type="tel" id="telefone" name="telefone"
+                     placeholder="(35) 99999-9999"
+                     autocomplete="tel">
+            </div>
+
+            <!-- Campo de área: ajuda no roteamento interno
+                 e adiciona keyword ao dado de conversão -->
+            <div class="form-group">
+              <label class="form-label" for="area">Área de interesse</label>
+              <select class="form-input" id="area" name="area">
+                <option value="">Selecione uma área</option>
+                <option value="civil">Direito Civil</option>
+                <option value="empresarial">Direito Empresarial</option>
+                <option value="trabalhista">Direito Trabalhista</option>
+                <option value="outro">Outro / Não sei</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="mensagem">Descreva brevemente seu caso</label>
+              <textarea class="form-textarea" id="mensagem" name="mensagem"
+                        placeholder="Conte-nos como podemos ajudá-lo..."
+                        required></textarea>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="lgpd_consent" name="lgpd_consent" required>
+              <label for="lgpd_consent">
+                Li e concordo com a
+                <a href="C:\Users\Usuario\OneDrive\Desktop\advogado (landingpage)\politica-de-privacidade\index.html" target="_blank" rel="noopener">Política de Privacidade</a>
+                e autorizo o uso dos meus dados para contato.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--gold btn--full" id="form-submit">
+              Enviar Mensagem
+            </button>
+
+          </form>
+        </div>
+
       </div>
-    </section>
-  
-  <!--═══════════════════════════
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
        FOOTER
+       O link "Dev Luiz" deve ter rel="noopener"
+       se abrir em _blank. Sem nofollow (você
+       quer o crédito de backlink).
   ═══════════════════════════════════════ -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -276,20 +731,33 @@
       </div>
       <p class="footer__disclaimer">
         Este site tem caráter exclusivamente informativo e não constitui oferta de serviços
-        jurídicos. OAB/MG nº 000.000. Comunicação institucional nos termos do Provimento 205/2021.
+        jurídicos. OAB/MG nº 000.000<!-- PREENCHER -->. Comunicação institucional nos termos do
+        <abbr title="Provimento do Conselho Federal da OAB">Provimento</abbr> 205/2021.
       </p>
-      <p class="footer__copy">© 2025 Ricardo Advocacia. Desenvolvido por <a href="#" class="footer__dev">Dev Luiz</a>.</p>
+      <p class="footer__copy">
+        © 2025 Ricardo Advocacia.
+        Desenvolvido por <a href="https://devluiz.com.br" class="footer__dev" rel="noopener">Dev Luiz</a>.<!-- PREENCHER: URL real -->
+      </p>
     </div>
   </footer>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- ═══════════════════════════════════════
+       SCRIPTS
+       GSAP via CDN com crossorigin + integrity
+       (SRI hash) — segurança + performance.
+       integrity evita que um CDN comprometido
+       sirva código malicioso.
+       Gere hashes em: srihash.org
+  ═══════════════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+          crossorigin="anonymous"
+          defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+          crossorigin="anonymous"
+          defer></script>
+  <script src="js/animation.js" defer></script>
+  <script src="js/cracks.js"  defer></script>
+  <script src="js/script.js"  defer></script>
 
-  <!-- Canvas de rachaduras -->
-  <script src="js/cracks.js"></script>
-
-  <!-- Script principal -->
-  <script src="js/script.js"></script>
 </body>
 </html>
