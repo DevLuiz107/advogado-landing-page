@@ -441,9 +441,6 @@ button { font-family: inherit; cursor: pointer; }
   filter: grayscale(20%) contrast(1.05);
   transition: filter 0.4s;
 }
-.card-profile:hover .card-profile__photo {
-  filter: grayscale(0%) contrast(1.1);
-}
 
 /* Badge OAB sobre a foto */
 .card-profile__oab {
@@ -709,114 +706,85 @@ button { font-family: inherit; cursor: pointer; }
 .contato__icon { font-size: 1rem; }
 
 /* Formulário */
-/* ═══════════════════════════════════════════════════════════
-   FORMULÁRIO DE CONTATO
-═══════════════════════════════════════════════════════════ */
-.form__error { font-size: .68rem; color: #e05c5c; margin-top: 2px; display: block; }
-[data-state="success"] { background: #2a7a3b; border-color: #2a7a3b; }
-[data-state="error"]   { background: #9b2525; border-color: #9b2525; }
-
-.form-group {
-  margin-bottom: 1.25rem;
+.contato-premium {
+background: var(--bg-dark);
+padding: var(--section-pad) 0;
+border-top: 1px solid var(--border-dark);
 }
 
-.form-label {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--on-dark-2);
-  margin-bottom: 0.5rem;
+.contato-premium__header {
+text-align: center;
+max-width: 700px;
+margin: 0 auto 4rem;
 }
 
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--on-dark-1);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-dark);
-  border-radius: var(--radius-sm);
-  outline: none;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+.contato-premium .section__title {
+color: var(--on-dark-1);
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: var(--on-dark-3);
+.contato-premium__subtitle {
+color: var(--on-dark-2);
+line-height: 1.8;
 }
 
-.form-input:focus,
-.form-textarea:focus {
-  border-color: var(--gold);
-  background: rgba(201, 168, 76, 0.04);
-  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+.contato-premium__grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+margin-bottom: 3rem;
 }
 
-.form-textarea {
-  resize: vertical;
-  min-height: 130px;
+.contato-card {
+background: rgba(255,255,255,0.03);
+border: 1px solid var(--border-dark);
+border-radius: 10px;
+padding: 2rem;
+text-align: center;
+
+backdrop-filter: blur(8px);
 }
 
-/* Checkbox LGPD Customizado */
-.form-check {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
-  cursor: pointer;
+.contato-card__icon {
+display: block;
+font-size: 2rem;
+margin-bottom: 1rem;
 }
 
-.form-check input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  min-width: 18px;
-  border: 1px solid var(--border-dark);
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.04);
-  cursor: pointer;
-  margin-top: 2px;
-  transition: background 0.2s, border-color 0.2s;
-  position: relative;
+.contato-card h3 {
+color: var(--gold);
+margin-bottom: 1rem;
+font-size: 1rem;
+text-transform: uppercase;
+letter-spacing: .12em;
 }
 
-.form-check input[type="checkbox"]:checked {
-  background: var(--gold);
-  border-color: var(--gold);
+.contato-card p,
+.contato-card a {
+color: var(--on-dark-2);
+line-height: 1.8;
 }
 
-.form-check input[type="checkbox"]:checked::after {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
-  border: solid #0D1008;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+.contato-card a:hover {
+color: var(--gold);
 }
 
-.form-check label {
-  font-size: 0.8rem;
-  color: var(--on-dark-2);
-  line-height: 1.5;
-  cursor: pointer;
+.contato-premium__cta {
+display: flex;
+justify-content: center;
 }
 
-.form-check label a {
-  color: var(--gold);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.contato-premium__cta .btn {
+padding: 1rem 2rem;
 }
-.form-check label a:hover {
-  color: var(--gold-light);
+
+@media (max-width: 860px) {
+
+.contato-premium__grid {
+grid-template-columns: 1fr;
 }
+
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    FOOTER
