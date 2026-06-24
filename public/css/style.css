@@ -411,17 +411,6 @@ button { font-family: inherit; cursor: pointer; }
   right: 10vw;
   z-index: 2;
   color: var(--on-dark-1);
-
-  /* Fundo semitransparente para o efeito vidro */
-  background: rgba(255, 255, 255, 0.08);
-
-  /* Blur só no que está ATRÁS do card */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari */
-
-  /* Opcional: borda sutil para reforçar o efeito vidro */
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
 }
 
 /* Foto */
